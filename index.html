@@ -4,281 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shiwanka Lanka Logistics | Manpower Solutions</title>
+    <title>Shiwanka Lanka Logistics (Pvt) Ltd</title>
+
+    <meta name="description" content="Shiwanka Lanka Logistics (Pvt) Ltd - Professional manpower and logistics staffing solutions in Sri Lanka.">
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #1b2a41;
             line-height: 1.6;
+            color: #222;
+            background: #f5f7fa;
         }
 
         header {
-            background: white;
+            background: #0b1f3a;
+            color: white;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         .logo {
             font-size: 22px;
             font-weight: bold;
-            color: #0b3d66;
-        }
-
-        .logo span {
-            color: #e67e22;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: #1b2a41;
-            margin-left: 25px;
+            margin-left: 22px;
             font-weight: bold;
         }
 
         nav a:hover {
-            color: #e67e22;
+            color: #ffcc00;
         }
 
         .hero {
-            min-height: 600px;
+            min-height: 75vh;
             display: flex;
             align-items: center;
-            padding: 80px 7%;
+            padding: 70px 7%;
+            background: linear-gradient(135deg, #0b1f3a, #164f86);
             color: white;
-
-            background:
-                linear-gradient(
-                    rgba(5, 35, 60, 0.85),
-                    rgba(5, 35, 60, 0.75)
-                ),
-                url("https://images.unsplash.com/photo-1586528116493-da8a6b1b3dca?auto=format&fit=crop&w=1800&q=80");
-
-            background-size: cover;
-            background-position: center;
         }
 
         .hero-content {
             max-width: 750px;
         }
 
-        .hero small {
-            color: #ffad5a;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
         .hero h1 {
-            font-size: 55px;
-            line-height: 1.1;
-            margin: 18px 0;
+            font-size: 48px;
+            margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
-            color: #e8eef4;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 25px;
-            border-radius: 6px;
+            padding: 13px 25px;
+            background: #ffcc00;
+            color: #111;
             text-decoration: none;
+            border-radius: 6px;
             font-weight: bold;
             margin-right: 10px;
         }
 
-        .btn-orange {
-            background: #e67e22;
-            color: white;
-        }
-
-        .btn-white {
+        .btn:hover {
             background: white;
-            color: #0b3d66;
         }
 
         section {
-            padding: 80px 7%;
+            padding: 70px 7%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
-            font-size: 36px;
-            color: #0b3d66;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #687789;
+            font-size: 34px;
+            color: #0b1f3a;
         }
 
         .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 55px;
-            align-items: center;
+            background: white;
         }
 
-        .about img {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        .about h2 {
-            color: #0b3d66;
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .about p {
-            color: #5d6b7b;
-            margin-bottom: 15px;
+        .about-text {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
         }
 
         .services {
-            background: #f6f8fb;
+            background: #f5f7fa;
         }
 
-        .cards {
+        .service-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
 
-        .card {
+        .service-card {
             background: white;
-            padding: 30px;
+            padding: 30px 20px;
+            text-align: center;
             border-radius: 10px;
-            border: 1px solid #e5eaf0;
-            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        .service-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 10px;
         }
 
-        .icon {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .card h3 {
-            color: #0b3d66;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            color: #687789;
-            font-size: 15px;
-        }
-
-        .why {
-            background: #ffffff;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .why-box {
-            padding: 20px;
-            background: #f6f8fb;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .why-box span {
-            color: #e67e22;
-            margin-right: 10px;
-        }
-
-        .cta {
-            background: #0b3d66;
+        .contact {
+            background: #0b1f3a;
             color: white;
             text-align: center;
         }
 
-        .cta h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
+        .contact h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
         }
 
-        .cta p {
-            margin-bottom: 25px;
-            color: #dce8f2;
+        .contact p {
+            margin: 8px 0;
+            font-size: 18px;
         }
 
         footer {
-            background: #071f33;
-            color: #ccd7e0;
-            padding: 35px 7%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        footer strong {
+            background: #061426;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
 
-        @media(max-width: 800px) {
-
+        @media (max-width: 700px) {
             header {
-                padding: 15px 5%;
+                flex-direction: column;
+                gap: 12px;
             }
 
-            nav {
-                display: none;
-            }
-
-            .hero {
-                min-height: 550px;
-                padding: 60px 5%;
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
             }
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 34px;
             }
 
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 60px 5%;
+            .hero p {
+                font-size: 17px;
             }
         }
     </style>
@@ -287,310 +184,128 @@
 <body>
 
 <header>
-
-    <div class="logo">
-        SHIWANKA <span>LANKA</span> LOGISTICS
-    </div>
+    <div class="logo">SHIWANKA LANKA LOGISTICS</div>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">About Us</a>
+        <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
         <a href="#contact">Contact</a>
     </nav>
-
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero" id="home">
-
     <div class="hero-content">
 
-        <small>SINCE 2020 • SRI LANKA</small>
-
-        <h1>
-            Your Trusted<br>
-            Manpower Partner
-        </h1>
+        <h1>SHIWANKA LANKA LOGISTICS (PVT) LTD</h1>
 
         <p>
-            Reliable workforce solutions for logistics,
-            warehousing, courier operations, manufacturing,
-            retail and other business sectors.
+            Reliable Manpower & Logistics Staffing Solutions
+            for Businesses Across Sri Lanka.
         </p>
 
-        <a href="#contact" class="btn btn-orange">
-            REQUEST MANPOWER
-        </a>
+        <a href="#services" class="btn">Our Services</a>
 
-        <a href="#services" class="btn btn-white">
-            OUR SERVICES
-        </a>
+        <a href="#contact" class="btn">Contact Us</a>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+
+    <div class="section-title">
+        <h2>About Us</h2>
+    </div>
+
+    <div class="about-text">
+
+        <p>
+            SHIWANKA LANKA LOGISTICS (PVT) LTD is a professional
+            manpower outsourcing and staffing company in Sri Lanka.
+        </p>
+
+        <br>
+
+        <p>
+            We provide reliable and skilled manpower solutions
+            for courier, logistics, warehouse, factory and business
+            operations.
+        </p>
+
+        <br>
+
+        <p>
+            Our goal is to connect businesses with dependable
+            employees while providing efficient workforce solutions.
+        </p>
 
     </div>
 
 </section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <div class="about">
-
-        <div>
-
-            <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80"
-                alt="Warehouse Operations"
-            >
-
-        </div>
-
-        <div>
-
-            <h2>
-                Empowering Businesses With Reliable Workforce Solutions
-            </h2>
-
-            <p>
-                SHIWANKA LANKA LOGISTICS (PVT) LTD provides
-                dependable manpower solutions to help businesses
-                build efficient and flexible teams.
-            </p>
-
-            <p>
-                We connect businesses with suitable employees
-                for warehouse operations, courier services,
-                transportation, manufacturing, retail and
-                office support.
-            </p>
-
-            <a href="#contact" class="btn btn-orange">
-                TALK TO US
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
 
 <section class="services" id="services">
 
     <div class="section-title">
-
-        <h2>Our Manpower Solutions</h2>
-
-        <p>
-            Flexible staffing solutions designed around
-            your business requirements.
-        </p>
-
+        <h2>Our Services</h2>
     </div>
 
+    <div class="service-grid">
 
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="icon">📦</div>
-
-            <h3>Warehouse Staff</h3>
-
-            <p>
-                Picking, packing, barcode scanning,
-                handling and daily warehouse operations.
-            </p>
-
+        <div class="service-card">
+            <h3>🚚 Drivers</h3>
+            <p>Light, heavy and container drivers for logistics operations.</p>
         </div>
 
-
-        <div class="card">
-
-            <div class="icon">🚚</div>
-
-            <h3>Drivers</h3>
-
-            <p>
-                Light and heavy vehicle drivers for
-                logistics and delivery operations.
-            </p>
-
+        <div class="service-card">
+            <h3>🏍️ Courier Riders</h3>
+            <p>Reliable bike riders for courier and delivery operations.</p>
         </div>
 
-
-        <div class="card">
-
-            <div class="icon">🏍️</div>
-
-            <h3>Courier Riders</h3>
-
-            <p>
-                Reliable riders for courier and
-                last-mile delivery operations.
-            </p>
-
+        <div class="service-card">
+            <h3>📦 Warehouse Staff</h3>
+            <p>Trained and reliable workers for warehouse operations.</p>
         </div>
 
-
-        <div class="card">
-
-            <div class="icon">👷</div>
-
-            <h3>Skilled & Unskilled Workers</h3>
-
-            <p>
-                Flexible workforce solutions according
-                to your operational requirements.
-            </p>
-
+        <div class="service-card">
+            <h3>👨‍💼 Supervisors</h3>
+            <p>Experienced supervisors for workforce management.</p>
         </div>
 
-
-        <div class="card">
-
-            <div class="icon">👨‍💼</div>
-
-            <h3>Supervisors</h3>
-
-            <p>
-                Experienced staff to coordinate teams
-                and support daily operations.
-            </p>
-
+        <div class="service-card">
+            <h3>💻 Office Staff</h3>
+            <p>Office staff, data entry operators and customer service personnel.</p>
         </div>
 
-
-        <div class="card">
-
-            <div class="icon">💻</div>
-
-            <h3>Office & Support Staff</h3>
-
-            <p>
-                Data entry operators, customer service
-                representatives, cashiers and more.
-            </p>
-
+        <div class="service-card">
+            <h3>👷 Skilled & Unskilled Workers</h3>
+            <p>Workforce solutions based on your company's requirements.</p>
         </div>
 
     </div>
 
 </section>
 
+<section class="contact" id="contact">
 
-<!-- WHY US -->
+    <h2>Contact Us</h2>
 
-<section class="why" id="why">
+    <p>📞 076 026 1077</p>
+    <p>📞 076 478 1245</p>
 
-    <div class="section-title">
+    <p>📧 shiwanka.lankaint@gmail.com</p>
 
-        <h2>Why Choose Us?</h2>
-
-        <p>
-            Professional manpower solutions built
-            around your business needs.
-        </p>
-
-    </div>
-
-
-    <div class="why-grid">
-
-        <div class="why-box">
-            <span>✓</span>
-            Reliable Workforce
-        </div>
-
-        <div class="why-box">
-            <span>✓</span>
-            Skilled & Trained Employees
-        </div>
-
-        <div class="why-box">
-            <span>✓</span>
-            Flexible Manpower Solutions
-        </div>
-
-        <div class="why-box">
-            <span>✓</span>
-            Quick Recruitment
-        </div>
-
-        <div class="why-box">
-            <span>✓</span>
-            Professional Management
-        </div>
-
-        <div class="why-box">
-            <span>✓</span>
-            Solutions Tailored To Your Business
-        </div>
-
-    </div>
+    <p>📍 Kotugoda, Ja-Ela, Sri Lanka</p>
 
 </section>
-
-
-<!-- CONTACT -->
-
-<section class="cta" id="contact">
-
-    <h2>
-        Need Reliable Manpower?
-    </h2>
-
-    <p>
-        Let us help you find the right people
-        for the right job.
-    </p>
-
-    <a
-        href="mailto:shiwanka.lankaint@gmail.com"
-        class="btn btn-orange"
-    >
-        CONTACT US
-    </a>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-    <div>
-
-        <strong>
-            SHIWANKA LANKA LOGISTICS (PVT) LTD
-        </strong>
-
-        <br>
-
-        Manpower & Workforce Solutions
-
-    </div>
-
-
-    <div>
-
-        📞 076 026 1077<br>
-
-        📞 076 478 1245<br>
-
-        ✉ shiwanka.lankaint@gmail.com
-
-    </div>
+    <p>
+        © 2026 SHIWANKA LANKA LOGISTICS (PVT) LTD.
+        All Rights Reserved.
+    </p>
 
 </footer>
-
 
 </body>
 </html>
